@@ -1,0 +1,2 @@
+# CM4_LCD_LT070ME05000
+Raspberry Pi CM4 bindings for JDI LT070ME05000 1200x1920 IPS display
