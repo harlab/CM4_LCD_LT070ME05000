@@ -1,6 +1,8 @@
 # CM4_LCD_LT070ME05000
 Raspberry Pi CM4 bindings for JDI LT070ME05000 1200x1920 IPS display
 
+![CM4Ext Nano with LCD](https://raw.githubusercontent.com/harlab/CM4_LCD_LT070ME05000/main/Documentation/CM4ExtNano_JDI1.jpeg)
+
 # Overview
 JDI LT070ME05000 is 7" 1200x1920 4-lane DSI IPS display used in Asus/Google Nexus 7 2013 tablet. To use it, 4-lane DSI interface is required, so it can be used with Raspberry Pi Compute Modules 3 and 4.
 Some suppliers have these displays available from ~$US20 shipped.
