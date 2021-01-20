@@ -47,3 +47,9 @@ dtoverlay=lt070me05000
 and reboot
 
 After reboot screen should we working and have portrait orientation. To adjust, use Main Menu/Preferences/Screen configuration utility
+
+# Hardware
+Adapter required. 
+Sources to be released.
+
+*Note* LCD_RST *MUST* be 1.8V with sufficient current. 74LVC1G17 being used in this adapter.
