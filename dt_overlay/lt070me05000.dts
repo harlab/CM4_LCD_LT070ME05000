@@ -1,0 +1,38 @@
+// Raspberry Pi JDI LT070ME05000 DTS
+// compile: sudo dtc -@ -I dts -O dtb -o lt070me05000.dtbo lt070me05000.dts
+
+/dts-v1/;
+/plugin/;
+
+/ {
+compatible = "brcm,bcm2835";  
+fragment@0 {
+  target = <&dsi1>;
+  __overlay__{
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    power-domains = <&power 18>;
+    port {
+      dsi_out_port:endpoint {
+        remote-endpoint = <&panel_dsi_port>;
+      };
+    };
+    panel_jdilt070:panel@0 {
+      compatible    = "jdi,lt070me05000";
+      label         = "panel_test";
+      status        = "okay";
+      reg           = <0>;
+      vc4_dsi       = <&dsi1>;
+      reset-gpios   = <&gpio 17 1>;   // LCD RST
+      enable-gpios  = <&gpio 4 0>;    // LCD Enable
+      dcdc-en-gpios = <&gpio 5 0>;    // LCD DC-DC Enable
+      port {
+         panel_dsi_port: endpoint {
+           remote-endpoint = <&dsi_out_port>;
+        };
+      };
+    };
+  };
+};
+};
