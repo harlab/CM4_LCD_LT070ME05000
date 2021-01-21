@@ -1,5 +1,5 @@
 // Raspberry Pi JDI LT070ME05000 DTS
-// compile: sudo dtc -@ -I dts -O dtb -o lt070me05000.dtbo lt070me05000.dts
+// compile: sudo dtc -@ -I dts -O dtb -o vc4-kms-dsi-lt070me05000-overlay.dtbo vc4-kms-dsi-lt070me05000-overlay.dts
 
 /dts-v1/;
 /plugin/;
