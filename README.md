@@ -34,15 +34,15 @@ sudo cp arch/arm/boot/zImage /boot/$KERNEL.img
 
 [Device Tree Source](https://github.com/harlab/CM4_LCD_LT070ME05000/blob/main/dt_overlay/lt070me05000.dts) can be modified to assign another GPIO numbers, then compiled and copied to boot partition:
 ```
-dtc -@ -I dts -O dtb -o lt070me05000.dtbo lt070me05000.dts
-sudo cp lt070me05000.dtbo /boot/overlays/
+sudo dtc -@ -I dts -O dtb -o vc4-kms-dsi-lt070me05000.dtbo vc4-kms-dsi-lt070me05000-overlay.dts
+sudo cp vc4-kms-dsi-lt070me05000.dtbo /boot/overlays/
 ```
 
 Then edit /boot/config.txt to add:
 ```
 lcd_ignore=1
 dtoverlay=vc4-kms-v3d
-dtoverlay=lt070me05000
+dtoverlay=vc4-kms-dsi-lt070me05000
 ```
 and reboot
 
