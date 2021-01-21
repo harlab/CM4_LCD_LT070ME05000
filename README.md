@@ -49,7 +49,11 @@ and reboot
 After reboot screen should we working and have portrait orientation. To adjust, use Main Menu/Preferences/Screen configuration utility
 
 # Hardware
-Adapter required. 
-Sources to be released.
-
-*Note* LCD_RST *MUST* be 1.8V with sufficient current. 74LVC1G17 being used in this adapter.
+Proof-of-concept schematics
+![Adapter](https://raw.githubusercontent.com/harlab/CM4_LCD_LT070ME05000/main/Documentation/adapter.jpg)
+Important notes:
+- This schematics comes with no warranties, use at your own risk
+- Verify pin 1 location for your application: two FPC connectors facing each other would have first pin at opposite side
+- 3V3 LDO gets hot. According to datasheet, VDD and VDDp can actually be powered from 3.0-5.0V
+- i2c part for TP is not tested
+- LCD_RST *MUST* be 1.8V with sufficient current, ie resistive divider 3.3->1.8 is likely not to work. If using with RPi CM3, LCD_RST can be directly driven by 1.8 powered GPIO bank
