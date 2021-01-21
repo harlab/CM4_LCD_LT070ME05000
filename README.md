@@ -51,6 +51,7 @@ After reboot screen should we working and have portrait orientation. To adjust, 
 # Hardware
 Proof-of-concept schematics
 ![Adapter](https://raw.githubusercontent.com/harlab/CM4_LCD_LT070ME05000/main/Documentation/adapter.jpg)
+
 Important notes:
 - This schematics comes with no warranties, use at your own risk
 - Verify pin 1 location for your application: two FPC connectors facing each other would have first pin at opposite side
