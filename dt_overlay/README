@@ -1,0 +1,7 @@
+Name:   vc4-kms-dsi-lt070me05000
+Info:   Enable JDI LT070ME05000 LCD display on DSI1
+Load:   dtoverlay=vc4-kms-dsi-lt070me05000,<param>
+Params: reset                   Reset pin (default 17)
+        enable                  Enable pin (default 4)
+        dcdc-en                 DCDC_Enable pin (default 5)
+
