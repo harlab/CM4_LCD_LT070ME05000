@@ -48,6 +48,18 @@ and reboot
 
 After reboot screen should we working and have portrait orientation. To adjust, use Main Menu/Preferences/Screen configuration utility
 
+LCD pins defaults to:
+- Reset - GPIO17
+- Enable - GPIO4
+- DCDC Enable - GPIO5
+
+Default pins can be changed, for example:
+```
+lcd_ignore=1
+dtoverlay=vc4-kms-v3d
+dtoverlay=vc4-kms-dsi-lt070me05000,reset=5,enable=17,dcdc-en=4
+```
+
 # Hardware
 Proof-of-concept schematics
 ![Adapter](https://raw.githubusercontent.com/harlab/CM4_LCD_LT070ME05000/main/Documentation/adapter.jpg)
